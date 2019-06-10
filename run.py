@@ -10,7 +10,7 @@ state = game.initial
 player = 'X'
 
 while True:
-    print ("Jugador a mover:", game.to_move(state))
+    print "Jugador a mover:", game.to_move(state)
     game.display(state)
 
     if player == 'O':
