@@ -10,7 +10,7 @@ state = game.initial
 player = 'X'
 
 while True:
-    print "Jugador a mover:", game.to_move(state)
+    print ("Jugador a mover:", game.to_move(state))
     game.display(state)
 
     if player == 'O':
@@ -26,7 +26,7 @@ while True:
         state = game.make_move((x, y), state)
         player = 'X'
     else:
-        print "Thinking..."
+        print ("Thinking...")
         #move = games.minimax_decision(state, game)
         #move = games.alphabeta_full_search(state, game)
         #move = games.alphabeta_search(state, game, eval_fn=heuristic.h0)
@@ -34,8 +34,8 @@ while True:
 
         state = game.make_move(move, state)
         player = 'O'
-    print "-------------------"
+    print ("-------------------")
     if game.terminal_test(state):
         game.display(state)
-        print "Final de la partida"
+        print ("Final de la partida")
         break
